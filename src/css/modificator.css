@@ -1,0 +1,41 @@
+.text-mod__name-section {
+  text-transform: uppercase;
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 80px;
+  left: 10%;
+  top: 10%;
+}
+
+.mod-location-position {
+  right: 10%;
+  top: 15%;
+}
+
+.text-mod__name-section-bg {
+  left: 0;
+  top: 15%;
+}
+
+.text-mod__subtitle {
+  height: 32px;
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 32px;
+  opacity: 0.5;
+  letter-spacing: 7.33333px;
+  text-transform: uppercase;
+}
+
+.text-mod__title {
+  height: 86px;
+  font-family: Fira Sans;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 86px;
+  text-transform: uppercase;
+}

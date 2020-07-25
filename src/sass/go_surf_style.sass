@@ -1,0 +1,1010 @@
+@import './modificator'
+@import './vars'
+body
+    padding: 0
+    margin: 0 
+    color: #fff
+    background-color: #050505
+
+
+::-webkit-scrollbar 
+    width: $scrollbar-size
+    height: 0.5em
+    transition: opacity .5s cubic-bezier(0.89, 0.6, 0, 1.76)
+    opacity: 0
+    z-index: 99995
+    &-thumb 
+        background-color: $primary_color
+        border-radius: 5px
+        z-index: 99996
+        &:hover 
+            background-color: $primary_color-hover
+            opacity: 1
+    &:hover 
+        background-color: $background-color-hover
+        opacity: 1
+
+
+
+/* header */
+.header 
+    width: 100wh
+    height: 100vh
+    &__slider
+        width: 100%
+        height: 100vh
+        &-item
+            width: 100%
+            height: 100vh
+            background-image: url('../images/header/nort.jpg') 
+            background-position: center 
+            background-repeat: no-repead
+            background-size: cover
+            position: relative 
+            -webkit-box-shadow: inset 50px 50px 500px 320px black 
+            box-shadow:  inset 50px 50px 500px 320px black
+
+    .slider-item__info
+        position: absolute
+        right: 5%
+        bottom: 10%
+        text-align: right
+        text-transform: uppercase
+        letter-spacing: 7px
+
+        &-suptitle
+            opacity: 0.5
+            margin-bottom: 10px
+            padding-left: 23px
+            position: relative
+            &::before
+                content: ""
+                position: absolute
+                width: 80px
+                height: 1px
+                background-color: #fff
+                right: 103px
+                top: 50%
+        
+        &-title
+            height: 86px
+            font-weight: 800
+            font-size: 80px
+            line-height: 86px
+            margin-bottom: 25px
+        &-suptext
+            height: 32px
+            font-weight: 300
+            font-size: 22px
+            line-height: 32px
+            opacity: 0.5
+            margin-bottom: 4px
+            position: relative
+            &::before
+                content: ""
+                position: absolute
+                width: 80px
+                height: 1px
+                background-color: #fff
+                right: 234px
+                top: 50%
+        &-text
+            height: 86px
+            font-weight: 800
+            font-size: 40px
+            line-height: 86px
+            margin: 0
+
+        &-link
+            position: absolute
+            padding: 0 10px
+            right: 0
+            margin-bottom: 42px
+            
+
+    .bg 
+
+        &__south
+            background-image: url('../images/header/south.jpg')
+
+        &__west
+            background-image: url('../images/header/west.jpg')
+
+        &__east
+            background-image: url('../images/header/east.jpg')
+
+    .slider-arrows
+        position: absolute
+        top: 5%
+        right: 5%
+        z-index: 3
+        cursor: pointer
+        &__left
+            right: 8%
+
+
+    .slider-dots
+        position: absolute
+        right: 3%
+        padding: 0
+        margin: 0
+        bottom: 1%
+        max-width: 60%
+        width: 100%
+        color: #fff
+
+        .slick-current
+            .dots-box
+                border-top: 4px solid #4AF6CD
+                transition: border-top .2s linear
+
+        .dots-box
+            display: flex
+            width: 80%
+            right: 0
+            justify-content: space-between
+            border-top: 4px solid #fff
+            border-radius: 1px
+            vertical-align: middle
+            padding: 5px
+            &__number
+                
+                font-weight: 800
+                font-size: 24px
+                
+
+            &__name
+                padding: 4px 0
+                opacity: 0.5
+                font-weight: 300
+                font-size: 16px
+    .nav-bar
+        
+        &__bg_logo
+            position: absolute
+            top: 0 
+            left: 0
+            z-index: 4
+
+        &__logo
+            
+
+        &__menu
+            position: absolute
+            top: 0
+            left: 0
+            width: 169px
+            height: 100%
+            margin: 0 auto
+            border-right: 1px solid #fff
+            z-index: 5
+
+            &__inner
+                width: 169px
+                display: block
+                margin: 30px auto
+                
+           
+                .nav-bar__icon
+                    display: block
+                    margin-left: auto
+                    margin-right: auto
+                    margin-bottom: 6px
+                    transition: zoom .2s linear
+                &:hover
+                    cursor: pointer
+
+                .search
+                    margin: 20px 
+                
+
+                .nav-bar__title
+                    text-align: center
+                    color: #FFFFFF
+                    
+                   
+                    &__day
+                        text-align: center
+                        font-weight: 700
+                        font-size: 72px
+                       
+
+                    &__mounth_and_year
+                        text-align: center
+                        font-weight: 300
+                        font-size: 16px
+                        text-align: center
+                        margin-bottom: 30px
+            .map
+                display: flex   
+                justify-content: center
+                margin-bottom: 40px
+                &__icon
+                    margin-right: 8px
+    .header_down_arrows
+        position: absolute
+        left: 200px
+        top: 95%
+
+    .header__map
+        position: absolute
+        top: -40px
+        right: 0
+        .header__map__img
+            stroke-dachoffset: 500  
+            stroke-dacharray: 500
+            animation: animdash 3s infinity 
+            .line-animation
+                
+                
+            
+        @keyframes animdash
+            0%
+                stroke-dachoffset: 500  
+            100%
+                stroke-dachoffset: 0
+                        
+.current_location
+    position: relative
+    width: 100%
+    height: 100vh
+    background-image: url('../images/current_location/cl_bg.jpg')  
+    background-position: center 
+    background-repeat: no-repead
+    background-size: fixed
+    -webkit-box-shadow: inset 50px 50px 700px 320px black 
+    box-shadow:  inset 50px 50px 700px 200px black
+
+    &__text      
+        position: absolute   
+        &::before
+            content: ""
+            position: absolute
+            width: 80px
+            height: 1px
+            border-top: 1px solid $primary_color
+            right: 0px
+            top: 0
+        
+    &__text-bg
+        position: absolute
+        
+    &__cl
+        position: absolute
+        
+        &__subtitle
+            text-align: right
+            &::before
+                content: ""
+                position: absolute
+                width: 80px
+                height: 1px
+                background-color: #fff
+                right: 320px
+                top: 10%
+        &__title
+           
+            text-align: right
+    &__map-point-green
+        width: $radius-map-point
+        height: $radius-map-point
+        border-radius: 50%
+        background: $primary_color
+        animation: pulse 2s infinite 
+        box-shadow: 0 0 10px 10px rgba(74,246,205, 0.5)
+        animation: pulse 2s infinite
+    @-webkit-keyframes pulse 
+        0% 
+            -webkit-box-shadow: 0 0 0 0 rgba(74,246,205, 0)
+        
+        70% 
+            -webkit-box-shadow: 0 0 20px 40px rgba(74,246,205, 0.7)
+        
+        100% 
+            -webkit-box-shadow: 0 0 20px 40px rgba(74,246,205, 0.7)
+        
+        
+    @keyframes pulse 
+        0% 
+            -moz-box-shadow: 0 0 0 0 rgba(74,246,205, 0)
+            box-shadow: 0 0 0 0 rgba(74,246,205, 0)
+        
+        70% 
+            -moz-box-shadow: 0 0 30px 40px rgba(74,246,205, 0.1)
+            box-shadow: 0 0 30px 40px rgba(74,246,205, 0.1)
+        
+        100% 
+            -moz-box-shadow: 0 0 0 0 rgba(74,246,205, 0)
+            box-shadow: 0 0 0 0 rgba(74,246,205, 0)
+        
+        
+                  
+    .point__1
+        position: absolute
+        left: 32%
+        top: 45%
+        
+        &:hover  
+            cursor: pointer
+            border-radius: 50%
+            border-top-right-radius: 0
+            border-top-right: 1px solid $primary-color
+            animation: none
+        &:hover  .point__content
+            display: block
+            
+
+    .point__2
+        position: absolute
+        left: 38%
+        top: 49%
+        &:hover  
+            cursor: pointer
+            
+            border-radius: 50%
+            border-top-right-radius: 0
+            border-top-right: 1px solid $primary-color
+            
+        &:hover  .point__content
+            display: block
+            
+    .point__3
+        position: absolute
+        left: 42.5%
+        top: 61%
+        &:hover  
+            cursor: pointer
+            
+            border-radius: 50%
+            border-top-right-radius: 0
+            border-top-right: 1px solid $primary-color
+            
+        &:hover  .point__content
+            animation: none
+            display: block
+            
+    .point__4
+        position: absolute
+        left: 47.5%
+        top: 40%
+        &:hover  
+            cursor: pointer
+            animation: none
+            border-radius: 50%
+            border-top-right-radius: 0
+            border-top-right: 1px solid $primary-color
+            
+        &:hover  .point__content
+            display: block
+            
+    .point__5
+        position: absolute
+        left: 52%
+        top: 65%
+        &:hover  
+            cursor: pointer
+            animation: none
+            border-radius: 50%
+            border-top-right-radius: 0
+            border-top-right: 1px solid $primary-color
+            
+        &:hover  .point__content
+            display: block
+            
+    .point__6
+        position: absolute
+        left: 58%
+        top: 52%
+        &:hover  
+            cursor: pointer
+            animation: none
+            border-radius: 50%
+            border-top-right-radius: 0
+            border-top-right: 1px solid $primary-color
+            
+        &:hover  .point__content
+            display: block
+            
+    .point__7
+        position: absolute
+        left: 69%
+        top: 64%
+        &:hover  
+            cursor: pointer
+            animation: none
+            border-radius: 50%
+            border-top-right-radius: 0
+            border-top-right: 1px solid $primary-color
+            
+        &:hover  .point__content
+            display: block
+            
+    .point__8
+        position: absolute
+        left: 27%
+        top: 50%
+        &:hover  
+            cursor: pointer
+            animation: none
+            border-radius: 50%
+            border-top-right-radius: 0
+            border-top-right: 1px solid $primary-color
+            
+        &:hover  .point__content
+            display: block
+           
+            
+    
+    .point__content
+        display: none
+        
+        position: absolute
+        width: 280px
+        height: 220px
+        background: black
+        z-index: 100
+        opacity: .8
+        border-radius: 5px
+        transform: translate(-140px,-235px)
+        transition: display 2s ease
+        &__row
+            display: flex
+            margin: 28px
+            font-family: Fira Sans
+            font-style: normal
+            justify-content: space-between
+            &__name
+                
+                &__title
+                    height: 26px
+                    font-weight: 800
+                    font-size: 18px
+                    line-height: 26px
+                    position: relative
+                    margin-bottom: 12px
+                    text-transform: uppercase
+                    &::before
+                        content: ""
+                        position: absolute
+                        width: 80px
+                        border-top: 1px solid $primary_color
+                        left: 0px
+                        bottom: 0%
+
+                &__subtitle
+                    height: 19px
+                    text-transform: lovercase
+                    font-weight: normal
+                    font-size: 16px
+                    line-height: 19px
+                &____arrows_right
+                    
+            &__inner
+                text-align: center
+                text-transform: uppercase
+                justify-content: center
+                &__icon
+                   
+                &__number
+                    height: 23px
+                    
+                    font-weight: 800
+                    font-size: 16px
+                    line-height: 23px
+                    margin: 7px auto
+                &__title
+                    height: 12px
+                    font-weight: 300
+                    font-size: 10px
+                    line-height: 12px
+
+.beaches
+    //display: flex
+    width: 100%
+    height: 100vh
+    -webkit-box-shadow: inset 50px 50px 700px 320px black 
+    box-shadow:  inset 50px 50px 700px 320px black
+    z-index: 50
+    &__slider
+        width: 100%
+        //height: 100vh
+    
+        .beaches-arrows
+            position: absolute
+            top: 60px
+            right: 80px
+            z-index: 3
+            cursor: pointer
+            opacity: .4
+            &__left
+                right: 125px
+        &__inner
+            
+            height: 750px
+            margin: 0
+            padding: 0
+            text-transform: uppercase
+            background-size: cover
+            background-position: center
+            background-repeat: no-repeat                     
+            font-family: Fira Sans
+            font-style: normal   
+            position: relative   
+            z-index: 5    
+            box-shadow:  inset 0px 0px 1000px 150px black
+            transition: box-shadow .2s linear
+            //box-shadow: 0px 0px 100px 10px $primary_color 
+            
+            @keyframes neon
+                0%
+                    box-shadow: 0px 0px 10px 2px $primary_color
+                50%
+                    box-shadow: 0px 0px 70px 14px $primary_color 
+                100%
+                    box-shadow: 0px 0px 10px 2px $primary_color 
+        
+        
+            .cart__title
+                position: absolute
+                top: 72px
+                left: 40px
+                width: 50%
+                height: 72px
+                font-weight: 800
+                font-size: 40px
+                line-height: 36px
+
+            .cart__location
+                
+                position: absolute
+                justify-content: right
+                width: 400px
+                height: 22px
+                left: -160px
+                bottom: 260px
+                transform: rotate(-90deg)
+                
+                
+                font-weight: normal
+                font-size: 18px
+                
+                letter-spacing: 8px
+
+
+            &:hover .cart__btn
+                opacity: 1
+                
+            &:hover 
+                box-shadow: inset 0px 0px 500px 40px black
+                animation: neon 5s infinite
+               
+                  
+            .cart__btn
+                position: absolute
+                opacity: 0
+                display: flex
+                margin-top: 670px
+                width: 100%
+                height: 80px
+                font-size: 40px
+                font-family: Fira Sans
+                font-style: normal
+                font-weight: 800
+                font-size: 40px
+                line-height: 80px
+                text-transform: uppercase
+                justify-content: center
+                align-items: center
+                transition: opacity .2s linear
+                z-index: 7
+                &__span 
+                    margin: 0 8px
+                    
+                &__surf
+                    margin-right: 16px
+                    
+                    position: relative
+                    &::after
+                        content: ""
+                        position: absolute
+                        left: -10px
+                        display: inline-block
+                        background-color: $primary_color
+                        z-index: -1
+                        bottom: 0
+                        width: 160px
+                        height: 80px
+                &__link
+                
+    .slider
+        
+        &__1
+            margin-top: 125px
+            z-index: 10
+        &__2
+            margin-top: 80px
+            z-index: 20
+        &__3
+            margin-top: 132px
+            z-index: 30
+        &__4
+            margin-top: 80px
+            z-index: 40
+        &__5
+            margin-top: 115px
+            z-index: 50
+        &__6
+            margin-top: 93px
+            z-index: 60
+        &__7
+            margin-top: 137px
+            z-index: 70
+        &__8
+            margin-top: 105px
+            z-index: 70
+
+.travel
+    width: 100%
+    height: 100vh
+    font-family: Fira Sans
+    font-style: normal
+    text-transform: uppercase
+    z-index: 100
+    position: relative
+    
+    &__slider
+        width: 100%
+        height: 100vh
+        
+        &__text      
+            position: absolute       
+            &::before
+                content: ""
+                position: absolute
+                width: 80px
+                height: 1px
+                border-top: 1px solid $primary_color
+                right: 0px
+                top: 0
+
+            &__bg
+                position: absolute
+    
+        &__inner
+            width: 100%
+            height: 100vh
+            
+            background-position: center 
+            background-repeat: no-repead
+            background-size: cover
+            position: relative 
+            -webkit-box-shadow: inset 50px 50px 5400px 320px black 
+            box-shadow:  inset 50px 50px 5400px 320px black
+            .travel__shore
+                position: absolute
+                text-align: right
+                z-index: 10
+                &__subtitle
+                    &::before
+                        content: ""
+                        position: absolute
+                        width: 80px
+                        height: 1px
+                        background-color: #fff
+                        right: 25%
+                        top: 11%
+                &__title
+
+            .travel__airline
+                position: absolute
+                top: 45%
+                left: 10%
+                z-index: 10
+                &__subtitle
+                    &::before
+                        content: ""
+                        position: absolute
+                        width: 80px
+                        height: 1px
+                        background-color: #fff
+                        left: 40%
+                        top: 11%
+                &__title
+
+                &__logo-airline
+                    bottom: 25px
+                    left: 0
+                    position: absolute
+
+            .travel__airline__plane
+                position: absolute
+                right: 0
+                top: 20%
+                
+            .travel__price
+                position: absolute
+                top: 65%
+                display: flex
+                width: 80%
+                left: 10%
+                height: 20%
+                justify-content: space-between
+                
+                &__inner
+                    //display: flex
+                    width: 16%
+                    margin: 0 auto
+                    position: relative
+                    
+                    
+                    &__subtitle
+                        position: absolute
+                        
+                        text-align: right
+                        transform: translate(-120px, 50px) rotate(-90deg)
+                    &__title
+                        position: absolute
+                        left: 0
+                        line-height: 40px
+                    .Destination
+                        &::after
+                            content: "Destination"
+                            transform: rotate(-90deg)
+                            text-align: right
+                            width: 30px
+                            height: 220px
+
+                    .Distance
+                        &::after
+                            content: "Distance"
+                            transform: rotate(-90deg)
+                            text-align: top
+                            width: 30px
+                            height: 220px
+                    .TravelTime
+                        &::after
+                            content: "Travel Time"
+                            transform: rotate(-90deg)
+                            width: 30px
+                            height: 220px
+                    .Pricing
+                        &::after
+                            content: "Pricing"
+                            transform: rotate(-90deg)
+                            text-align: left
+                            width: 30px
+                            height: 220px
+                    &__subtitle
+            .travel__btn
+                position: absolute
+                display: flex
+                top: 87%
+                width: 100%
+                height: 80px
+                font-size: 40px
+                font-family: Fira Sans
+                font-style: normal
+                font-weight: 800
+                font-size: 40px
+                line-height: 80px
+                text-transform: uppercase
+                justify-content: center
+                align-items: center
+                
+                z-index: 100
+                
+                &__span 
+                    margin: 0 8px
+                    
+                &__flight
+                    margin-right: 16px
+                    
+                    position: relative
+                    &::after
+                        content: ""
+                        position: absolute
+                        left: -10px
+                        display: inline-block
+                        background-color: $primary_color
+                        z-index: -1
+                        bottom: 0
+                        width: 160px
+                        height: 80px
+                &__link
+            
+            .travel__slider__cocktail
+                position: absolute
+                right: 0
+                top: 59%
+                height: 400px
+
+.sleep
+    width: 100% 
+    height: 100vh
+    font-family: Fira Sans
+    font-style: normal
+    text-transform: uppercase
+    z-index: 100
+    position: relative
+    
+    &__slider
+        width: 100%
+        height: 100vh
+        
+        &__text      
+            position: absolute       
+            &::before
+                content: ""
+                position: absolute
+                width: 80px
+                height: 1px
+                border-top: 1px solid $primary_color
+                right: 0px
+                top: 0
+
+            &__bg
+                position: absolute
+    
+        &__inner
+            width: 100%
+            height: 100vh
+            
+            background-position: center 
+            background-repeat: no-repead
+            background-size: cover
+            position: relative 
+            -webkit-box-shadow: inset 50px 50px 5400px 320px black 
+            box-shadow:  inset 50px 50px 5400px 320px black
+            .sleep__shore
+                position: absolute
+                text-align: right
+                z-index: 10
+                &__subtitle
+                    &::before
+                        content: ""
+                        position: absolute
+                        width: 80px
+                        height: 1px
+                        background-color: #fff
+                        right: 40%
+                        top: 11%
+                &__title
+
+            .sleep__airline
+                position: absolute
+                top: 45%
+                left: 10%
+                z-index: 10
+                &__subtitle
+                    &::before
+                        content: ""
+                        position: absolute
+                        width: 80px
+                        height: 1px
+                        background-color: #fff
+                        left: 60%
+                        top: 11%
+                &__title
+
+                &__logo-airline
+                    bottom: 25px
+                    left: 0
+                    position: absolute
+
+            .sleep__airline__plane
+                position: absolute
+                right: 0
+                top: 30%
+                
+            .sleep__price
+                position: absolute
+                top: 65%
+                display: flex
+                width: 80%
+                left: 10%
+                height: 20%
+                justify-content: space-between
+                
+                &__inner
+                    //display: flex
+                    width: 16%
+                    margin: 0 auto
+                    position: relative
+                    
+                    
+                    &__subtitle
+                        position: absolute
+                        
+                        text-align: right
+                        transform: translate(-120px, 50px) rotate(-90deg)
+                    &__title
+                        position: absolute
+                        left: 0
+                        line-height: 40px
+                    .Destination
+                        &::after
+                            content: "Resort"
+                            transform: rotate(-90deg)
+                            text-align: right
+                            width: 30px
+                            height: 220px
+
+                    .Distance
+                        &::after
+                            content: "# of Nights"
+                            transform: rotate(-90deg)
+                            text-align: top
+                            width: 30px
+                            height: 220px
+                    .TravelTime
+                        &::after
+                            content: "# of Guests"
+                            transform: rotate(-90deg)
+                            width: 30px
+                            height: 220px
+                    .Pricing
+                        &::after
+                            content: "Pricing"
+                            transform: rotate(-90deg)
+                            text-align: left
+                            width: 30px
+                            height: 220px
+                    &__subtitle
+            .sleep__btn
+                position: absolute
+                display: flex
+                top: 87%
+                width: 100%
+                height: 80px
+                font-size: 40px
+                font-family: Fira Sans
+                font-style: normal
+                font-weight: 800
+                font-size: 40px
+                line-height: 80px
+                text-transform: uppercase
+                justify-content: center
+                align-items: center
+                
+                z-index: 100
+                
+                &__span 
+                    margin: 0 8px
+                    
+                &__flight
+                    margin-right: 16px
+                    
+                    position: relative
+                    &::after
+                        content: ""
+                        position: absolute
+                        left: -10px
+                        display: inline-block
+                        background-color: $primary_color
+                        z-index: -1
+                        bottom: 0
+                        width: 160px
+                        height: 80px
+                &__link
+            
+            .sleep__slider__cocktail
+                position: absolute
+                right: 0
+                top: 59%
+                height: 400px    
+.shop
+    &_slider
+        &__inner
+            .shop__grid-container
+                display: flex
+                justify-content: space-between
+                //grid-template-columns: 1fr 1fr 1fr   
+                &__inner
+                    width: 100%
+                    .surfboard
+                    
+                    .extras
+                        display: flex
+                        justify-content: space-around
+
+@import ./responsive
